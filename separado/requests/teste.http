@@ -1,0 +1,103 @@
+@api = http://localhost:3000
+
+### Listar produtos da padaria
+GET {{api}}/produtos
+
+### Buscar produto pelo id
+GET {{api}}/produtos/p1
+
+### Criar produto
+POST {{api}}/produtos
+Content-Type: application/json
+
+{
+  "nome": "Broa de fubá",
+  "categoria": "Pães",
+  "preco": 5.5,
+  "peso": "120 g",
+  "estoque": 20,
+  "descricao": "Broa artesanal."
+}
+
+### Atualizar produto
+PATCH {{api}}/produtos/p1
+Content-Type: application/json
+
+{
+  "preco": 1.00,
+  "estoque": 100
+}
+
+### Excluir produto (use um id de teste)
+DELETE {{api}}/produtos/ID_DO_PRODUTO
+
+### Listar eventos
+GET {{api}}/eventos
+
+### Buscar evento por id
+GET {{api}}/eventos/e1
+
+### Criar evento relacionado a cidade e atrações
+POST {{api}}/eventos
+Content-Type: application/json
+
+{
+  "nome": "Festival de Primavera",
+  "data": "2027-09-20",
+  "local": "Praça da Estação",
+  "cidadeId": "c1",
+  "atracaoIds": ["a1", "a3"],
+  "descricao": "Evento cultural de primavera."
+}
+
+### Atualizar evento
+PATCH {{api}}/eventos/e1
+Content-Type: application/json
+
+{
+  "local": "Centro Cultural"
+}
+
+### Excluir evento (use um id de teste)
+DELETE {{api}}/eventos/ID_DO_EVENTO
+
+### Listar pacotes de viagem
+GET {{api}}/pacotes
+
+### Criar pacote relacionado a origem, destino e promoção
+POST {{api}}/pacotes
+Content-Type: application/json
+
+{
+  "nome": "Conheça Gramado",
+  "cidadeOrigemId": "c1",
+  "cidadeDestinoId": "c5",
+  "promocaoId": "pr2",
+  "duracaoDias": 5,
+  "preco": 2190,
+  "descricao": "Pacote de cinco dias."
+}
+
+### Atualizar pacote
+PATCH {{api}}/pacotes/v1
+Content-Type: application/json
+
+{
+  "preco": 2790
+}
+
+### Excluir pacote (use um id de teste)
+DELETE {{api}}/pacotes/ID_DO_PACOTE
+
+### Listar cidades, atrações e promoções (dados de relacionamento)
+GET {{api}}/cidades
+###
+GET {{api}}/atracoes
+###
+GET {{api}}/promocoes
+
+### Consultas de relacionamento: eventos da cidade c1
+GET {{api}}/eventos?cidadeId=c1
+
+### Consultas de relacionamento: pacotes com cidade de destino c2
+GET {{api}}/pacotes?cidadeDestinoId=c2

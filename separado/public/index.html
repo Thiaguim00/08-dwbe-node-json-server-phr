@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#172747">
+  <title>Central de Gestão | JSON Server</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-icon">API</span><div><strong>Central de Gestão</strong><small>Node.js · JSON Server · CRUD</small></div></div>
+    <div class="api-status"><span id="status-dot"></span><span id="status-text">Conectando à API...</span></div>
+  </header>
+
+  <main class="layout">
+    <section class="hero">
+      <div><span class="eyebrow">PROJETO 08 · DESENVOLVIMENTO WEB</span><h1>Gerencie seus dados<br><em>em um só lugar.</em></h1>
+      <p>Três módulos CRUD completos com relacionamentos entre registros, usando JSON Server como API REST.</p></div>
+      <div class="hero-art"><div class="hero-orbit"></div><div class="hero-box">{"<>"}</div></div>
+    </section>
+
+    <nav class="tabs" aria-label="Módulos">
+      <button class="tab active" data-tab="produtos">Padaria</button>
+      <button class="tab" data-tab="eventos">Eventos</button>
+      <button class="tab" data-tab="pacotes">Pacotes de viagem</button>
+      <button class="tab" data-tab="apoio">Cadastros de apoio</button>
+    </nav>
+
+    <section class="summary-grid" id="summary-grid">
+      <article class="summary-card"><span>Produtos</span><strong id="count-produtos">—</strong><small>itens cadastrados</small></article>
+      <article class="summary-card"><span>Eventos</span><strong id="count-eventos">—</strong><small>eventos cadastrados</small></article>
+      <article class="summary-card"><span>Pacotes</span><strong id="count-pacotes">—</strong><small>pacotes cadastrados</small></article>
+      <article class="summary-card"><span>API</span><strong id="api-port">3000</strong><small>porta configurada</small></article>
+    </section>
+
+    <section class="workspace">
+      <div class="section-head">
+        <div><span class="eyebrow" id="module-eyebrow">CRUD · EXERCÍCIO 1</span><h2 id="module-title">Produtos da padaria</h2><p id="module-description">Cadastre, consulte, edite e exclua os produtos.</p></div>
+        <button class="button button-primary" id="new-record">+ Novo cadastro</button>
+      </div>
+
+      <div class="toolbar">
+        <label class="search"><span>⌕</span><input id="search-input" type="search" placeholder="Buscar registros..."></label>
+        <select id="filter-select" aria-label="Filtrar registros"><option value="">Todas as categorias</option></select>
+        <button class="button button-light" id="refresh-button">Atualizar</button>
+      </div>
+
+      <div id="record-list" class="record-grid"><div class="loading">Carregando dados da API...</div></div>
+    </section>
+
+    <section class="relation-note" id="relation-note">
+      <strong>Relacionamentos do projeto</strong>
+      <p>Os eventos relacionam cidades e atrações. Os pacotes de viagem relacionam cidades de origem, cidades de destino e promoções. Cadastre primeiro os itens de apoio na aba correspondente.</p>
+    </section>
+  </main>
+
+  <dialog id="record-dialog" class="dialog">
+    <form id="record-form" method="dialog">
+      <div class="dialog-head"><div><span class="eyebrow">DADOS DO CADASTRO</span><h2 id="dialog-title">Novo registro</h2></div><button type="button" class="close-button" id="close-dialog" aria-label="Fechar">×</button></div>
+      <div id="form-fields" class="form-fields"></div>
+      <p class="form-error" id="form-error"></p>
+      <div class="dialog-actions"><button type="button" class="button button-light" id="cancel-dialog">Cancelar</button><button type="submit" class="button button-primary">Salvar cadastro</button></div>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast" role="status"></div>
+  <footer><span>Central de Gestão · Projeto acadêmico</span><span>API REST com JSON Server</span></footer>
+</body>
+</html>

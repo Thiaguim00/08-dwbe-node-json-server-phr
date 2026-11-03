@@ -1,0 +1,187 @@
+{
+  "produtos": [
+    {
+      "id": "p1",
+      "nome": "Pão francês",
+      "categoria": "Pães",
+      "preco": 0.85,
+      "peso": "50 g",
+      "estoque": 120,
+      "descricao": "Pão francês tradicional, assado diariamente."
+    },
+    {
+      "id": "p2",
+      "nome": "Pão de queijo",
+      "categoria": "Salgados",
+      "preco": 3.5,
+      "peso": "80 g",
+      "estoque": 45,
+      "descricao": "Pão de queijo artesanal."
+    },
+    {
+      "id": "p3",
+      "nome": "Bolo de cenoura",
+      "categoria": "Bolos",
+      "preco": 28.0,
+      "peso": "500 g",
+      "estoque": 8,
+      "descricao": "Bolo de cenoura com cobertura de chocolate."
+    },
+    {
+      "id": "p4",
+      "nome": "Sonho de creme",
+      "categoria": "Doces",
+      "preco": 6.0,
+      "peso": "100 g",
+      "estoque": 18,
+      "descricao": "Sonho recheado com creme."
+    }
+  ],
+  "cidades": [
+    {
+      "id": "c1",
+      "nome": "Belo Horizonte",
+      "estado": "MG",
+      "pais": "Brasil"
+    },
+    {
+      "id": "c2",
+      "nome": "Maceió",
+      "estado": "AL",
+      "pais": "Brasil"
+    },
+    {
+      "id": "c3",
+      "nome": "Porto Seguro",
+      "estado": "BA",
+      "pais": "Brasil"
+    },
+    {
+      "id": "c4",
+      "nome": "Rio de Janeiro",
+      "estado": "RJ",
+      "pais": "Brasil"
+    },
+    {
+      "id": "c5",
+      "nome": "Gramado",
+      "estado": "RS",
+      "pais": "Brasil"
+    }
+  ],
+  "atracoes": [
+    {
+      "id": "a1",
+      "nome": "Banda Horizonte",
+      "tipo": "Música",
+      "descricao": "Show de música popular."
+    },
+    {
+      "id": "a2",
+      "nome": "DJ Marina",
+      "tipo": "Música",
+      "descricao": "Set de música eletrônica."
+    },
+    {
+      "id": "a3",
+      "nome": "Feira Gastronômica",
+      "tipo": "Gastronomia",
+      "descricao": "Expositores e experiências culinárias."
+    },
+    {
+      "id": "a4",
+      "nome": "Companhia de Teatro Luz",
+      "tipo": "Teatro",
+      "descricao": "Apresentação teatral."
+    }
+  ],
+  "eventos": [
+    {
+      "id": "e1",
+      "nome": "Festival de Inverno",
+      "data": "2027-07-18",
+      "local": "Praça Central",
+      "cidadeId": "c5",
+      "atracaoIds": [
+        "a1",
+        "a4"
+      ],
+      "descricao": "Festival cultural com música e teatro."
+    },
+    {
+      "id": "e2",
+      "nome": "Encontro Sabores de Minas",
+      "data": "2027-05-22",
+      "local": "Parque Municipal",
+      "cidadeId": "c1",
+      "atracaoIds": [
+        "a3"
+      ],
+      "descricao": "Evento dedicado à gastronomia regional."
+    },
+    {
+      "id": "e3",
+      "nome": "Noite Musical",
+      "data": "2027-08-14",
+      "local": "Arena da Praia",
+      "cidadeId": "c2",
+      "atracaoIds": [
+        "a1",
+        "a2"
+      ],
+      "descricao": "Apresentações musicais ao vivo."
+    }
+  ],
+  "promocoes": [
+    {
+      "id": "pr1",
+      "nome": "Férias de Julho",
+      "desconto": 15,
+      "descricao": "Desconto para viagens no mês de julho."
+    },
+    {
+      "id": "pr2",
+      "nome": "Antecedência",
+      "desconto": 10,
+      "descricao": "Desconto para reservas antecipadas."
+    },
+    {
+      "id": "pr3",
+      "nome": "Rota Cultural",
+      "desconto": 12,
+      "descricao": "Condição especial para destinos culturais."
+    }
+  ],
+  "pacotes": [
+    {
+      "id": "v1",
+      "nome": "Descanso em Maceió",
+      "cidadeOrigemId": "c1",
+      "cidadeDestinoId": "c2",
+      "promocaoId": "pr1",
+      "duracaoDias": 7,
+      "preco": 2890,
+      "descricao": "Pacote de 7 dias com hospedagem."
+    },
+    {
+      "id": "v2",
+      "nome": "Praias de Porto Seguro",
+      "cidadeOrigemId": "c1",
+      "cidadeDestinoId": "c3",
+      "promocaoId": "pr2",
+      "duracaoDias": 6,
+      "preco": 2490,
+      "descricao": "Viagem com passeios pelas praias."
+    },
+    {
+      "id": "v3",
+      "nome": "Fim de semana no Rio",
+      "cidadeOrigemId": "c1",
+      "cidadeDestinoId": "c4",
+      "promocaoId": "pr3",
+      "duracaoDias": 3,
+      "preco": 1590,
+      "descricao": "Pacote urbano com atrações culturais."
+    }
+  ]
+}
